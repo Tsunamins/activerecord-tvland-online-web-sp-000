@@ -13,7 +13,7 @@ class Actor < ActiveRecord::Base
     actor_shows = self.shows.pluck(:name) 
     actor_chars = self.characters.pluck(:name)
    
-    #binding.pry 
+    binding.pry 
     
   end 
   
