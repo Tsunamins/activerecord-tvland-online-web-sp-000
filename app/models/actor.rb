@@ -13,6 +13,7 @@ class Actor < ActiveRecord::Base
     actor_shows = self.shows.pluck(:name) 
     actor_chars = self.characters.pluck(:name)
     flatten_result = actor_chars.push(actor_shows).flatten
+    join_result = flatten_result.join(" - ")
     
     
   end 
