@@ -12,8 +12,8 @@ class Actor < ActiveRecord::Base
   def list_roles
     actor_shows = self.shows.pluck(:name) 
     actor_chars = self.characters.pluck(:name)
-   
-    binding.pry 
+    actor_chars.push(actor_shows)
+    
     
   end 
   
