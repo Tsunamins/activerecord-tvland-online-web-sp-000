@@ -12,7 +12,7 @@ class Actor < ActiveRecord::Base
   def list_roles
     actor_shows = self.shows.pluck(:name) 
     actor_chars = self.characters.pluck(:name)
-    actor_chars.push(actor_shows)
+    flatten_result = actor_chars.push(actor_shows).flatten
     
     
   end 
